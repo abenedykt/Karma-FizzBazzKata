@@ -13,6 +13,9 @@ module.exports = function(config) {
         // list of files to exclude
         exclude: [],
 
+        preprocessors : {
+            '**/src/*.js': 'coverage'
+        },
         // use dots reporter, as travis terminal does not support escaping sequences
         // possible values: 'dots', 'progress', 'junit', 'teamcity'
         // CLI --reporters progress
@@ -22,6 +25,7 @@ module.exports = function(config) {
             // will be resolved to basePath (in the same way as files/exclude patterns)
             outputFile: 'test-results.xml'
         },
+
 
         // web server port
         // CLI --port 9876
@@ -57,7 +61,10 @@ module.exports = function(config) {
 
         // If browser does not capture in given timeout [ms], kill it
         // CLI --capture-timeout 5000
-        captureTimeout: 5000
+        captureTimeout: 5000,
+
+
+
     });
 };
 
