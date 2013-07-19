@@ -1,4 +1,4 @@
-module.exports = function(config) {
+module.exports = function (config) {
     config.set({
 
         basePath: '../',
@@ -8,18 +8,19 @@ module.exports = function(config) {
         // list of files / patterns to load in the browser
         files: [
             'src/*.js',
-            'tests/*.js'
+            'tests/*.js',
+            'src/lib/*.js'
         ],
         // list of files to exclude
         exclude: [],
 
-        preprocessors : {
+        preprocessors: {
             '**/src/*.js': 'coverage'
         },
         // use dots reporter, as travis terminal does not support escaping sequences
         // possible values: 'dots', 'progress', 'junit', 'teamcity'
         // CLI --reporters progress
-        reporters: ['progress', 'junit','coverage'],
+        reporters: ['progress', 'junit', 'coverage'],
 
         junitReporter: {
             // will be resolved to basePath (in the same way as files/exclude patterns)

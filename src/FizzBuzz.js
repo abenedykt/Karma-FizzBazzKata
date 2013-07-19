@@ -1,15 +1,15 @@
-var FizzBuzz = (function(){
+var FizzBazz = (function () {
+    'use strict';
+    var For = function (n) {
+        var result = "", i = 1;
 
-    var For = function(n){
-        var result = "";
+        for (i = 1; i <= n; i = i + 1) {
 
-        for(var i = 1; i <= n; i++){
-
-            if(i%3 === 0 && i%5 === 0){
-                result += "FizzBuzz";
-            } else if( i%3 === 0){
+            if (i % 3 === 0 && i % 5 === 0) {
+                result += "FizzBazz";
+            } else if (i % 3 === 0) {
                 result += "Fizz";
-            } else if (i%5 ===0) {
+            } else if (i % 5 === 0) {
                 result += "Buzz";
             } else {
                 result += i.toString();
@@ -21,6 +21,6 @@ var FizzBuzz = (function(){
     };
 
     return {
-        for: For
-    }
+        run: For
+    };
 }());
