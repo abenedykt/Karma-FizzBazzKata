@@ -17,7 +17,9 @@ describe("Simplest DOM test", function () {
     });
 
     it('adds a highlight style when highlight is executed', function () {
-        myDom.highlight($('.control'));
-        expect($('.control').hasClass('highlight-this')).toBeTruthy();
+        var control = $('.control');
+        myDom.highlight(control);
+
+        expect(control.hasClass('highlight-this')).toBeTruthy();
     });
 });
